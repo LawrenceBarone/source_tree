@@ -27,6 +27,7 @@ void AMovingPlatform::BeginPlay() {
 void AMovingPlatform::Tick(float DeltaTime) {
 	Super::Tick(DeltaTime);
 	if (activeTriggers > 0) {
+
 		if (HasAuthority()) { //HasAuthority is server side
 			FVector Location = GetActorLocation(); //Store Actor Location in const Vec;
 			float JourneyLenght = (GlobalTargetLocation - GlobalStartLocation).Size();
